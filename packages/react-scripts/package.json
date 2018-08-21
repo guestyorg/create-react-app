@@ -21,7 +21,7 @@
     "react-scripts": "./bin/react-scripts.js"
   },
   "dependencies": {
-    "@guestyci/atomic-design": "^1.0.49",
+    "@guestyci/atomic-design": "^1.1.0",
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
