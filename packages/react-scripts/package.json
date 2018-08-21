@@ -1,6 +1,6 @@
 {
   "name": "@guestyci/guesty-react-scripts",
-  "version": "1.1.7",
+  "version": "1.1.9",
   "description": "Guesty Configuration and scripts for Create React App.",
   "repository": "guestyorg/create-react-app",
   "license": "MIT",
@@ -34,8 +34,8 @@
     "css-loader": "0.28.7",
     "dotenv": "4.0.0",
     "dotenv-expand": "4.2.0",
-    "eslint": "^5.4.0",
-    "eslint-config-airbnb": "^17.1.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^15.1.0",
     "eslint-config-react-app": "^2.1.0",
     "eslint-loader": "1.9.0",
     "eslint-plugin-flowtype": "2.39.1",
