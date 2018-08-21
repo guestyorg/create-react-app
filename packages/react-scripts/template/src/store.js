@@ -1,13 +1,12 @@
-import { applyMiddleware, combineReducers, createStore } from "redux";
-import { reducer as formReducer } from "redux-form";
+import { applyMiddleware, combineReducers, createStore } from 'redux';
+import { reducer as formReducer } from 'redux-form';
 
 import {
   actionSplitterMiddleware,
   apiMiddleware,
   loggerMiddleware,
   stateFreezer,
-  undoable
-} from "@guestyci/atomic-design/dist/reduxRoot/";
+} from '@guestyci/atomic-design/dist/reduxRoot/';
 
 const tempReducer = (state = {}, action) => {
   switch (action.type) {
@@ -18,7 +17,7 @@ const tempReducer = (state = {}, action) => {
 // shape the state structure
 const rootReducer = combineReducers({
   tempReducer,
-  form: formReducer
+  form: formReducer,
 });
 
 // // create the feature middleware array
@@ -31,7 +30,7 @@ const featureMiddleware = [
 const coreMiddleware = [
   actionSplitterMiddleware,
   apiMiddleware,
-  loggerMiddleware
+  loggerMiddleware,
 ];
 
 // compose the middleware with additional (optional) enhancers,
