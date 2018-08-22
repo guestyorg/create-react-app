@@ -153,6 +153,10 @@ module.exports = {
         include: paths.appSrc,
       },
       {
+        test: /^(?!.*\.bg\.svg$).*\.svg$/,
+        loader: 'svg-react-loader',
+      },
+      {
         // "oneOf" will traverse all following loaders until one will
         // match the requirements. When no loader matches it will fall
         // back to the "file" loader at the end of the loader list.
