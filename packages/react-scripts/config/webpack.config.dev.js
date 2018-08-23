@@ -161,6 +161,10 @@ module.exports = {
               name: 'static/media/[name].[hash:8].[ext]',
             },
           },
+          {
+            test: /^(?!.*\.bg\.svg$).*\.svg$/,
+            loader: 'svg-react-loader',
+          },
           // Process JS with Babel.
           {
             test: /\.(js|jsx|mjs)$/,
@@ -234,10 +238,6 @@ module.exports = {
       },
       // ** STOP ** Are you adding a new loader?
       // Make sure to add the new loader(s) before the "file" loader.
-      {
-        test: /^(?!.*\.bg\.svg$).*\.svg$/,
-        loader: 'svg-react-loader',
-      },
     ],
   },
   plugins: [
