@@ -1,6 +1,6 @@
 {
   "name": "@guestyci/guesty-react-scripts",
-  "version": "1.1.22",
+  "version": "1.1.23",
   "description": "Guesty Configuration and scripts for Create React App.",
   "repository": "guestyorg/create-react-app",
   "license": "MIT",
@@ -47,6 +47,7 @@
     "file-loader": "1.1.5",
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",
+    "immutability-helper": "^2.7.1",
     "jest": "20.0.4",
     "lodash": "^4.17.10",
     "moment": "^2.22.2",
