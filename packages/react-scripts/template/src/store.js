@@ -15,13 +15,13 @@ const tempReducer = (state = {}, action) => {
   }
 };
 // shape the state structure
-const rootReducer = combineReducers({
+export const rootReducer = {
   tempReducer,
   form: formReducer,
-});
+};
 
 // // create the feature middleware array
-const featureMiddleware = [
+export const featureMiddleware = [
 //   // reservationPageMiddleware,
 //   // guestCardMiddleware,
 ];
@@ -36,6 +36,6 @@ const coreMiddleware = [
 // compose the middleware with additional (optional) enhancers,
 const enhancer = applyMiddleware(...featureMiddleware, ...coreMiddleware);
 // create and configure the store
-export const store = createStore(stateFreezer(rootReducer), {}, enhancer);
+export const store = createStore(stateFreezer(combineReducers(rootReducer)), {}, enhancer);
 export default store;
 
