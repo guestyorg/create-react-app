@@ -60,6 +60,8 @@ module.exports = {
   appNodeModules: resolveApp('node_modules'),
   publicUrl: getPublicUrl(resolveApp('package.json')),
   servedPath: getServedPath(resolveApp('package.json')),
+  libApp: resolveApp('src/App/index.js'),
+  libStore: resolveApp('src/store.js'),
 };
 
 // @remove-on-eject-begin
@@ -83,6 +85,8 @@ module.exports = {
   // These properties only exist before ejecting:
   ownPath: resolveOwn('.'),
   ownNodeModules: resolveOwn('node_modules'), // This is empty on npm 3
+  libApp: resolveApp('src/App/index.js'),
+  libStore: resolveApp('src/store.js'),
 };
 
 const ownPackageJson = require('../package.json');
@@ -113,6 +117,8 @@ if (
     // These properties only exist before ejecting:
     ownPath: resolveOwn('.'),
     ownNodeModules: resolveOwn('node_modules'),
+    libApp: resolveApp('src/App/index.js'),
+    libStore: resolveApp('src/store.js'),
   };
 }
 // @remove-on-eject-end

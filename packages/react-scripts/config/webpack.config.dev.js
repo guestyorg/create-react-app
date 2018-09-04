@@ -19,6 +19,8 @@ const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getClientEnvironment = require('./env');
 const paths = require('./paths');
+const ownPackageJson = require(paths.appPackageJson);
+
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
@@ -59,6 +61,8 @@ module.exports = {
     // We include the app code last so that if there is a runtime error during
     // initialization, it doesn't blow up the WebpackDevServer client, and
     // changing JS code would still trigger a refresh.
+    paths.libApp,
+    paths.libStore,
   ],
   output: {
     // Add /* filename */ comments to generated require()s in the output.
@@ -74,6 +78,8 @@ module.exports = {
     // Point sourcemap entries to original disk location (format as URL on Windows)
     devtoolModuleFilenameTemplate: info =>
       path.resolve(info.absoluteResourcePath).replace(/\\/g, '/'),
+    library: ownPackageJson.name,
+    libraryTarget: 'umd',
   },
   resolve: {
     // This allows you to set a fallback for where Webpack should look for modules.
