@@ -36,6 +36,6 @@ const coreMiddleware = [
 // compose the middleware with additional (optional) enhancers,
 const enhancer = applyMiddleware(...featureMiddleware, ...coreMiddleware);
 // create and configure the store
-export const store = createStore(stateFreezer(combineReducers(rootReducer)), {}, enhancer);
+const store = createStore(stateFreezer(combineReducers(rootReducer)), {}, enhancer);
 export default store;
 
