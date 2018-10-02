@@ -38,8 +38,8 @@ module.exports = function(
   // Setup the script rules
   appPackage.scripts = {
     start: 'react-scripts start',
-    build: 'babel ./src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__',
-    // build: 'react-scripts build',
+    // build: 'babel ./src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__',
+    build: 'react-scripts build',
     test: 'react-scripts test --env=jsdom',
     eject: 'react-scripts eject',
   };

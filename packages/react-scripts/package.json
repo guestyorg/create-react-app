@@ -1,6 +1,6 @@
 {
   "name": "@guestyci/guesty-react-scripts",
-  "version": "1.1.42",
+  "version": "1.1.43",
   "description": "Guesty Configuration and scripts for Create React App.",
   "repository": "guestyorg/create-react-app",
   "license": "MIT",
@@ -81,8 +81,8 @@
     "whatwg-fetch": "2.0.3"
   },
   "devDependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react": "16.4.1",
+    "react-dom": "16.4.1"
   },
   "optionalDependencies": {
     "fsevents": "^1.1.3"
