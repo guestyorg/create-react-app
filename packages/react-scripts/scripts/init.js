@@ -38,7 +38,6 @@ module.exports = function(
   // Setup the script rules
   appPackage.scripts = {
     start: 'react-scripts start',
-    // build: 'babel ./src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__',
     build: 'react-scripts build',
     test: 'react-scripts test --env=jsdom',
     eject: 'react-scripts eject',
@@ -57,12 +56,16 @@ module.exports = function(
     );
   }
 
+  console.log(chalk.cyan('Start template moving !!!!!!!!!!!!!!!!!!!!!!!!!!!!!'));
   // Copy the files for the user
   const templatePath = template
     ? path.resolve(originalDirectory, template)
     : path.join(ownPath, 'template');
+  console.log(`${chalk.green('Moving from:')} ${chalk.yellow(templatePath)} to: ${chalk.yellow(appPath)}`);
+
   if (fs.existsSync(templatePath)) {
     fs.copySync(templatePath, appPath);
+    console.log('moving done');
   } else {
     console.error(
       `Could not locate supplied template: ${chalk.green(templatePath)}`
@@ -83,6 +86,24 @@ module.exports = function(
           const data = fs.readFileSync(path.join(appPath, 'gitignore'));
           fs.appendFileSync(path.join(appPath, '.gitignore'), data);
           fs.unlinkSync(path.join(appPath, 'gitignore'));
+        } else {
+          throw err;
+        }
+      }
+    }
+  );
+
+  fs.move(
+    path.join(appPath, 'npmignore'),
+    path.join(appPath, '.npmignore'),
+    [],
+    err => {
+      if (err) {
+        // Append if there's already a `.npmignore` file there
+        if (err.code === 'EEXIST') {
+          const data = fs.readFileSync(path.join(appPath, 'npmignore'));
+          fs.appendFileSync(path.join(appPath, '.npmignore'), data);
+          fs.unlinkSync(path.join(appPath, 'npmignore'));
         } else {
           throw err;
         }
