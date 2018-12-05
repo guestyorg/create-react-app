@@ -1,6 +1,6 @@
 {
   "name": "@guestyci/guesty-react-scripts",
-  "version": "1.1.52",
+  "version": "1.1.71",
   "description": "Guesty Configuration and scripts for Create React App.",
   "repository": "guestyorg/create-react-app",
   "license": "MIT",
@@ -21,7 +21,7 @@
     "react-scripts": "./bin/react-scripts.js"
   },
   "dependencies": {
-    "@guestyci/atomic-design": "^1.1.17",
+    "@guestyci/atomic-design": "^1.1.55",
     "autoprefixer": "7.1.6",
     "babel-cli": "^6.26.0",
     "babel-core": "6.26.0",
@@ -81,8 +81,9 @@
     "whatwg-fetch": "2.0.3"
   },
   "devDependencies": {
-    "react": "16.4.1",
-    "react-dom": "16.4.1"
+    "react": "16.5.2",
+    "react-dom": "16.5.2",
+    "uglifyjs-webpack-plugin": "^2.0.1"
   },
   "optionalDependencies": {
     "fsevents": "^1.1.3"
