@@ -1,6 +1,6 @@
 {
   "name": "@guestyci/guesty-react-scripts",
-  "version": "1.1.71",
+  "version": "1.1.72",
   "description": "Guesty Configuration and scripts for Create React App.",
   "repository": "guestyorg/create-react-app",
   "license": "MIT",
@@ -83,6 +83,7 @@
   "devDependencies": {
     "react": "16.5.2",
     "react-dom": "16.5.2",
+    "source-map-explorer": "^1.6.0",
     "uglifyjs-webpack-plugin": "^2.1.1"
   },
   "optionalDependencies": {
