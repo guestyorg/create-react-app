@@ -83,7 +83,7 @@
   "devDependencies": {
     "react": "16.5.2",
     "react-dom": "16.5.2",
-    "uglifyjs-webpack-plugin": "^2.0.1"
+    "uglifyjs-webpack-plugin": "^2.1.1"
   },
   "optionalDependencies": {
     "fsevents": "^1.1.3"
