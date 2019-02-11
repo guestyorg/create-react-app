@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 // @remove-on-eject-begin
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -30,4 +28,3 @@ Object.assign = require('object-assign');
 if (process.env.NODE_ENV === 'test') {
   require('raf').polyfill(global);
 }
-global.$ = global.jQuery = $;

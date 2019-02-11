@@ -39,8 +39,8 @@ module.exports = (resolve, rootDir, isEjecting) => {
         'config/jest/fileTransform.js'
       ),
     },
-    // transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$'],
-    transformIgnorePatterns: ["node_modules/(?!(@guestyci/atomic-design|react-redux|lodash-es)/)"],
+    transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$'],
+    // transformIgnorePatterns: ["node_modules/(?!(@guestyci/atomic-design|react-redux|lodash-es)/)"],
     moduleNameMapper: {
       '^react-native$': 'react-native-web',
       '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/__mocks__/fileMock.js',
