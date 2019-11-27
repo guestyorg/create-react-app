@@ -66,6 +66,8 @@ module.exports = function(webpackEnv) {
   const isEnvProduction = webpackEnv === 'production';
   const isEnvTest = webpackEnv === 'test';
   const isClusterProduction = process.env.CLUSTER === 'production';
+  const isEnvProductionProfile =
+      isEnvProduction && process.argv.includes('--profile');
 
   // Webpack uses `publicPath` to determine where the app is being served from.
   // It requires a trailing slash, or the file assets will get an incorrect path.
