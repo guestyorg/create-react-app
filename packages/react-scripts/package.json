@@ -1,6 +1,6 @@
 {
   "name": "@guestyci/guesty-react-scripts",
-  "version": "5.0.5",
+  "version": "5.0.0",
   "description": "Guesty Configuration and scripts for Create React App.",
   "repository": "guestyorg/create-react-app",
   "license": "MIT",
@@ -69,8 +69,8 @@
     "resolve-url-loader": "3.1.1",
     "sass-loader": "8.0.0",
     "semver": "6.3.0",
-    "svg-react-loader": "^0.4.6",
     "style-loader": "1.0.0",
+    "svg-react-loader": "^0.4.6",
     "terser-webpack-plugin": "2.2.1",
     "ts-pnp": "1.1.5",
     "url-loader": "2.3.0",
