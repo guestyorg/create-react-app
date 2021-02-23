@@ -1,3 +1,7 @@
+## 5.1.14
+
+- Fix moment.js Spanish localization in the webpack configuration.
+
 ## 5.1.12
 
 - Addition to the template - post a message to the parent (layout page) once the app is loaded. That, so the layout page will monitor its accessibility. 
