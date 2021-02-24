@@ -1,3 +1,7 @@
+## 5.1.15
+
+- Fixed ESLint by updating `eslint-plugin-import` to version 2.22.1 
+
 ## 5.1.14
 
 - Fix moment.js Spanish localization in the webpack configuration.
