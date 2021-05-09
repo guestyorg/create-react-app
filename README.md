@@ -1,3 +1,22 @@
+## Deprecated
+
+The project is deprecated.
+Jarvis now uses Create React app's [Custom Templates](https://create-react-app.dev/docs/custom-templates/).
+
+### Migration 
+
+In order to migrate to a newer `react-scripts` version:
+* `yarn remove @guestyci/guesty-react-scripts`
+* `yarn remove babel-eslint`
+* `yarn add @babel/eslint-parser`
+* `yarn add react-scripts`
+* `yarn add eslint-config-airbnb`
+* `yarn add eslint-config-prettier`
+
+#### Breaking changes: 
+
+`CLUSTER` and `GUESTY_ENV` are no longer passed to build
+
 # Guesty's Create React App
 
 Guesty's fork configurations for Create-react-app
