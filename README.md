@@ -13,6 +13,8 @@ In order to migrate to a newer `react-scripts` version:
 * `yarn add eslint-config-airbnb`
 * `yarn add eslint-config-prettier`
 
+If you encounter any issue with the migration, please `#contact-platform-fe`
+
 #### Breaking changes: 
 
 `CLUSTER` and `GUESTY_ENV` are no longer passed to build
