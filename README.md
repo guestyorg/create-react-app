@@ -7,17 +7,13 @@ Jarvis now uses Create React app's [Custom Templates](https://create-react-app.d
 
 In order to migrate to a newer `react-scripts` version:
 * `yarn remove @guestyci/guesty-react-scripts`
-* `yarn remove babel-eslint`
-* `yarn add @babel/eslint-parser`
-* `yarn add react-scripts`
-* `yarn add eslint-config-airbnb`
-* `yarn add eslint-config-prettier`
+* `yarn add react-scripts eslint-config-airbnb eslint-config-prettier`
 
 If you encounter any issue with the migration, please `#contact-platform-fe`
 
 #### Breaking changes: 
 
-`CLUSTER` and `GUESTY_ENV` are no longer passed to build
+`CLUSTER` and `GUESTY_ENV` are no longer passed to the build.
 
 # Guesty's Create React App
 
