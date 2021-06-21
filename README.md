@@ -7,7 +7,7 @@ Jarvis now uses Create React app's [Custom Templates](https://create-react-app.d
 
 In order to migrate to a newer `react-scripts` version:
 * `yarn remove @guestyci/guesty-react-scripts`
-* `yarn add react-scripts eslint-config-airbnb eslint-config-prettier`
+* `yarn add react-scripts eslint-config-airbnb eslint-config-prettier babel-plugin-transform-react-qa-classes`
 
 If you encounter any issue with the migration, please `#contact-platform-fe`
 
