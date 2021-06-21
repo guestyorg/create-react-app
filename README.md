@@ -7,7 +7,13 @@ Jarvis now uses Create React app's [Custom Templates](https://create-react-app.d
 
 In order to migrate to a newer `react-scripts` version:
 * `yarn remove @guestyci/guesty-react-scripts`
-* `yarn add react-scripts eslint-config-airbnb eslint-config-prettier babel-plugin-transform-react-qa-classes`
+* `yarn add react-scripts eslint-config-airbnb eslint-config-prettier babel-plugin-transform-react-qa-classes react-app-rewired customize-cra`
+* cat ```const { override, addBabelPlugin } = require('customize-cra');
+
+module.exports = override(
+  addBabelPlugin('babel-plugin-transform-react-qa-classes')
+);``` > `config-overrides.js`
+
 
 If you encounter any issue with the migration, please `#contact-platform-fe`
 
