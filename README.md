@@ -1,3 +1,28 @@
+## Deprecated
+
+The project is deprecated.
+Jarvis now uses Create React app's [Custom Templates](https://create-react-app.dev/docs/custom-templates/).
+
+### Migration 
+
+In order to migrate to a newer `react-scripts` version:
+* `yarn remove @guestyci/guesty-react-scripts`
+* `yarn add react-scripts babel-plugin-transform-react-qa-classes`
+* `yarn add eslint-config-airbnb eslint-config-prettier react-app-rewired customize-cra --dev`
+* echo "const { override, addBabelPlugin } = require('customize-cra');
+module.exports = override(
+  addBabelPlugin('babel-plugin-transform-react-qa-classes')
+);
+" > `config-overrides.js`
+* `cat <<< $(jq '.scripts += {start:"ESLINT_NO_DEV_ERRORS=true react-app-rewired start"}' package.json) > package.json`
+* Upgrade `Circle CI` node docker image to version 12 (`.circleci/config.yml`)
+
+If you encounter any issue with the migration, please `#contact-platform-fe`
+
+#### Breaking changes: 
+
+`CLUSTER` and `GUESTY_ENV` are no longer passed to the build.
+
 # Guesty's Create React App
 
 Guesty's fork configurations for Create-react-app
