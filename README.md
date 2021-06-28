@@ -9,11 +9,53 @@ In order to migrate to a newer `react-scripts` version:
 * `yarn remove @guestyci/guesty-react-scripts`
 * `yarn add react-scripts babel-plugin-transform-react-qa-classes`
 * `yarn add eslint-config-airbnb eslint-config-prettier react-app-rewired customize-cra --dev`
-* echo "const { override, addBabelPlugin } = require('customize-cra');
+* Copy-paste the following into `config-overrides.js`
+```js
+const { override, addBabelPlugin, addWebpackPlugin } = require('customize-cra');
+const ContextReplacementPlugin = require('webpack').ContextReplacementPlugin;
+
+const supportedLocales = [
+  'de',
+  'fr',
+  'hu',
+  'ja',
+  'it',
+  'es',
+  'nl',
+  'cs',
+  'da',
+  'el',
+  'hr',
+  'pl',
+  'ru',
+  'sk',
+  'pt-br',
+  'zh-cn',
+];
+
 module.exports = override(
-  addBabelPlugin('babel-plugin-transform-react-qa-classes')
+  // Remove moment locales opt out:
+  // https://github.com/facebook/create-react-app/blob/64df135c29208f08a175c941a0e94d9a56d9e4af/packages/react-scripts/config/webpack.config.js#L728
+  (config) => {
+    config.plugins = config.plugins.filter(
+      (plugin) => 'IgnorePlugin' !== plugin.constructor.name
+    );
+    return config;
+  },
+  addWebpackPlugin(
+    new ContextReplacementPlugin(
+      /moment[\/\\]locale/,
+      new RegExp(
+        `[/\\\\](${supportedLocales
+          .map((locale) => `${locale}(\\.js)?`)
+          .join('|')})$`
+      )
+    )
+  ),
+  process.env.NODE_ENV !== 'production' &&
+    addBabelPlugin('babel-plugin-transform-react-qa-classes')
 );
-" > `config-overrides.js`
+```
 * `cat <<< $(jq '.scripts += {start:"ESLINT_NO_DEV_ERRORS=true react-app-rewired start", build:"react-app-rewired build"}' package.json) > package.json`
 * Upgrade `Circle CI` node docker image to version 12 (`.circleci/config.yml`)
 
