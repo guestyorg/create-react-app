@@ -14,7 +14,7 @@ module.exports = override(
   addBabelPlugin('babel-plugin-transform-react-qa-classes')
 );
 " > `config-overrides.js`
-* `cat <<< $(jq '.scripts += {start:"ESLINT_NO_DEV_ERRORS=true react-app-rewired start"}' package.json) > package.json`
+* `cat <<< $(jq '.scripts += {start:"ESLINT_NO_DEV_ERRORS=true react-app-rewired start", build:"react-app-rewired build"}' package.json) > package.json`
 * Upgrade `Circle CI` node docker image to version 12 (`.circleci/config.yml`)
 
 If you encounter any issue with the migration, please `#contact-platform-fe`
